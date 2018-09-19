@@ -64,8 +64,8 @@ hist3ComposantesYCbCr=JR_Hist3Composantes(imageYCbCr)
  figure, imshow(imageLab), title('representation RGB!!! de l image convertie en Lab');
  % On peut s'amuser a regarder les composantes separemment en niveaux de
  % gris ou en couleur
-  JR_PlotRepresentation(imageYCbCr);
-  JR_PlotRepresentationCouleur(imageYCbCr);
+  JR_PlotRepresentation(imageLab);
+  JR_PlotRepresentationCouleur(imageLab);
  
   
   %%%%% Quelques fonctions qui peuvent etre utiles:

@@ -22,11 +22,11 @@ function imageYUV=JR_Rgb2Yul(imageRGB)
 red=double(imageRGB(:,:,1));
 green=double(imageRGB(:,:,2));
 %% A completer le code pour pouvoir le faire fonctionner
-=double(imageRGB(:,:,3));
+blue=double(imageRGB(:,:,3));
 
 taille = size(imageRGB);
 %% A completer le code pour pouvoir le faire fonctionner
-    =taille(1);
+hauteur=taille(1);
 largeur=taille(2); 
 
 %% On fait la conversion selon le standard donne a http://en.wikipedia.org/wiki/YUV

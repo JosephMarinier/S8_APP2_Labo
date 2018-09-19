@@ -15,17 +15,17 @@ function hist3Composantes=JR_Hist3Composantes(image)
 %% On prepare les histogrammes
 nBins = 256; % nb de bins de l'histogramme
 %% A completer le code pour pouvoir le faire fonctionner
-comp1Hist = imhist(image(:,:,1), ); % histogramme de la composante 1
-comp2Hist = imhist(image(:,:,2), );
-comp3Hist = imhist(image(:,:,3), );
+comp1Hist = imhist(image(:,:,1), nBins); % histogramme de la composante 1
+comp2Hist = imhist(image(:,:,2), nBins);
+comp3Hist = imhist(image(:,:,3), nBins);
 
 %% Sortie graphique
 hFig = figure;
 hold on
 %% A completer le code pour pouvoir le faire fonctionner
-h(1) = stem(1:256, comp1Hist,''); % y pour jaune, r pour rouge
-h(2) = stem( + 1/3, comp2Hist,''); % m pour magenta, g pour green
-h(3) = stem( + 2/3, comp3Hist,'b'); % c pour cyan, b pour bleu
+h(1) = stem(1:256, comp1Hist,'r'); % y pour jaune, r pour rouge
+h(2) = stem((1:256) + 1/3, comp2Hist,'g'); % m pour magenta, g pour green
+h(3) = stem((1:256) + 2/3, comp3Hist,'b'); % c pour cyan, b pour bleu
 title('Superposition des 3 histogrammes. Rouge: 1ere comp., Vert: 2nd comp., Bleu: 3iem comp.');
 
 %% Creation de la matrice contenant les 3 histogrammes

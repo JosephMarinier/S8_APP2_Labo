@@ -21,9 +21,9 @@ nbComposantes=taille(3);
 %% on cree les images intermediaires qui representeront composantes avec les couleurs
 % Attention, on suppose que les images utilisent 3 composantes!!!
  %% A completer le code pour pouvoir le faire fonctionner
- imageComp1=(image); imageComp1(:,:,2)=; imageComp1(:,:,3)=;
- imageComp2=(image); imageComp2(:,:,1)=; imageComp2(:,:,3)=;
- imageComp3=(image); imageComp3(:,:,1)=; imageComp3(:,:,2)=;
+ imageComp1=(image); imageComp1(:,:,2)=0; imageComp1(:,:,3)=0;
+ imageComp2=(image); imageComp2(:,:,1)=0; imageComp2(:,:,3)=0;
+ imageComp3=(image); imageComp3(:,:,1)=0; imageComp3(:,:,2)=0;
  tableauTemporaire=[imageComp1 imageComp2 imageComp3];
 %% On affiche chaque composante
 figure;

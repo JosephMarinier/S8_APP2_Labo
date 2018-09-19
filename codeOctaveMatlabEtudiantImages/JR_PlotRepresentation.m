@@ -14,7 +14,7 @@ function JR_PlotRepresentation(image)
 
 %% Validation de la taille de l'image
 %% A completer le code pour pouvoir le faire fonctionner
- = size(image);
+taille = size(image);
 hauteur=taille(1); % non utilisee ici
 largeur=taille(2); % non utilisee ici
 nbComposantes=taille(3);

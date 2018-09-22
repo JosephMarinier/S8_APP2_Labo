@@ -29,7 +29,7 @@
 %% Lire un fichier quelconque d'images couleurs de typr RGB
 %fichierImage = imread('forest_natu934.jpg');
 %fichierImage = imread('coast_bea9.jpg');
-fichierImage = imread('.jpg');
+fichierImage = imread('../baseDeDonneesImages/coast_bea9.jpg');
  % Examinez dans l'espace de travail la taille de l'image
 whos fichierImage; % comprendre et examiner la facon dont les pixels sont cod'es dans l'image
  
@@ -52,7 +52,7 @@ imageApprentissage=double(fichierImage);
 
 % On organise l'image en une serie de vecteurs de dimensions nbComposantes
 %% A completer le code pour pouvoir le faire fonctionner
-imageApprentissage=reshape(imageApprentissage, ,);
+imageApprentissage=reshape(imageApprentissage, hauteur * largeur, nbComposantes);
 
 %% On demande a l'algorithme des K-Moyennes de trouver K nuages de points
 K=2;% essayer plusieurs valeurs de K et visualiser les resultats
@@ -60,12 +60,12 @@ K=2;% essayer plusieurs valeurs de K et visualiser les resultats
 %% On cherche les K nuages de points a l'aide des K-Moyennes.
 % La distance entre les vecteurs est la distance euclidienne,
 % 
-[indexDesNuages centresDesNuages] = kmeans(imageApprentissage,K,'distance','sqEuclidean');
+[indexDesNuages, centresDesNuages] = kmeans(imageApprentissage,K,'distance','sqEuclidean');
 
 %% Visualisation des resultats sur les images
 % On transforme le vecteur d'index en image de dimension hauteur x largeur
 %% A completer le code pour pouvoir le faire fonctionner
-etiquettesDePixels = reshape(indexDesNuages,,);
+etiquettesDePixels = reshape(indexDesNuages, hauteur, largeur);
 
 figure, imshow(etiquettesDePixels,[]), title('image etiquettee')
 
